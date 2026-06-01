@@ -2,7 +2,7 @@ import { useAuth } from "@clerk/react";
 import { useEffect } from "react";
 import * as Sentry from "@sentry/react";
 
-export function SentryUserSync() {
+export default function SentryUserSync() {
     const { isLoaded, userId } = useAuth();
     useEffect(() => {
         if (isLoaded) return;

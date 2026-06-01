@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-function Layout({ children }) {
+export default function Layout({ children }) {
     return (
         <div className="flex min-h-svh flex-col bg-base-200 text-base-content">
             <Navbar />
@@ -12,5 +12,3 @@ function Layout({ children }) {
         </div>
     );
 }
-
-export default Layout;

@@ -23,7 +23,7 @@ const items = [
     },
 ];
 
-export function TrustStrip() {
+export default function TrustStrip() {
     return (
         <section className="grid gap-4 rounded-box border border-base-300 bg-base-100 p-6 sm:grid-cols-2 lg:grid-cols-4">
             {items.map(({ icon, title, desc }) => {

@@ -4,7 +4,7 @@ import { formatPrice } from "../utils/format.js";
 import { IK_PRESETS, imageKitOptimizedUrl } from "../lib/imagekitUrl.js";
 import { useCart } from "../store/cart.js";
 
-export function CatalogProductCard({ product }) {
+export default function CatalogProductCard({ product }) {
     const addItem = useCart((s) => s.addItem);
 
     return (
