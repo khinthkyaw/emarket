@@ -12,6 +12,7 @@ import OrderDetailPage from "./pages/OrderDetailPage";
 import OrderSummaryPage from "./pages/OrderSummaryPage";
 import OrderChatPage from "./pages/OrderChatPage";
 import OrderVideoPage from "./pages/OrderVideoPage";
+import AdminProductsPage from "./pages/AdminProductsPage";
 
 function App() {
   const { isLoaded, isSignedIn } = useAuth();
@@ -27,6 +28,7 @@ function App() {
         <Route path="/checkout/return" element={<CheckoutReturnPage />} />
         <Route path="/demo-sentry" element={<SentryDemoPage />} />
         <Route path="/orders/:id/call" element={isSignedIn ? <OrderVideoPage /> : <Navigate to={"/"} repalce />} />
+        <Route path="/admin" element={isSignedIn ? <AdminProductsPage /> : <Navigate to="/" replace />} />
         <Route path="/orders/:id" element={<OrderDetailPage />}>
           <Route index element={<OrderSummaryPage />} />
           <Route path="chat" element={<OrderChatPage />} />
